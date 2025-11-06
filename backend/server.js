@@ -4,8 +4,11 @@ const morgan = require('morgan');
 const cors = require('cors');
 const connectDB = require('./config/db');
 
+const authRoutes = require('./routes/auth');
+
 const reelRoutes = require('./routes/reelRoutes');
 const userRoutes = require('./routes/userRoutes');
+
 
 const app = express();
 app.use(cors());
@@ -14,6 +17,7 @@ app.use(morgan('dev'));
 
 connectDB();
 
+app.use('/auth', authRoutes);
 app.use('/reel', reelRoutes);
 app.use('/user', userRoutes);
 
