@@ -17,9 +17,10 @@ app.use(morgan('dev'));
 
 connectDB();
 
-app.use('/auth', authRoutes);
-app.use('/reel', reelRoutes);
-app.use('/user', userRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/reel', reelRoutes);
+app.use('/api/user', userRoutes);
+
 
 // health
 app.get('/', (req, res) => res.json({ ok: true }));

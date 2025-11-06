@@ -4,6 +4,7 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import { FiUsers, FiVideo, FiHeart, FiMessageCircle, FiSettings } from "react-icons/fi";
 import { HiShoppingBag } from "react-icons/hi";
+import { FaUserCircle } from 'react-icons/fa';
 
 const ProfilePage = () => {
   const { username } = useParams();
@@ -110,6 +111,11 @@ const ProfilePage = () => {
 
         {/* Reels Grid */}
         <div className="p-4">
+          <div>
+          <FaUserCircle size={24} color="blue" />
+          <span>Login</span>
+        </div>
+
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-bold text-gray-800 text-sm">Reels</h3>
             <Link
